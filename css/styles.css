@@ -8,7 +8,7 @@
     /* Color Palette - Tucson Desert Theme */
     --primary-color: #F94144; /* Coral red */
     --primary-dark: #D63336;
-    --secondary-color: #5B8A72; /* Desert sage */
+    --secondary-color: #90BE6D; /* Green accent */
     --accent-color: #E8B84D; /* Golden desert */
     --text-dark: #2C2416;
     --text-light: #F5F1E8;
@@ -334,7 +334,7 @@ a:hover {
 }
 
 .btn-secondary:hover {
-    background-color: #4A7260;
+    background-color: #7AA858;
 }
 
 .btn-outline {
