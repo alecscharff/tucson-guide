@@ -1,0 +1,247 @@
+/* Responsive Design - Mobile First */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+
+  /* Typography */
+  html {
+    font-size: 15px;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.35rem; }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  /* Navigation - Mobile Menu */
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--terracotta);
+    padding: var(--spacing-md);
+    gap: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav li:last-child {
+    border-bottom: none;
+  }
+
+  nav a {
+    display: block;
+    padding: var(--spacing-sm);
+    width: 100%;
+  }
+
+  /* Cards Grid */
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 300px;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  /* Location Details */
+  .detail-row {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .detail-label {
+    min-width: auto;
+    font-weight: 700;
+  }
+
+  /* Nearby Grid */
+  .nearby-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tables - Horizontal Scroll */
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 500px;
+  }
+
+  th, td {
+    padding: var(--spacing-xs);
+    font-size: 0.9rem;
+  }
+
+  /* Container Padding */
+  .container {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  /* Buttons */
+  .btn {
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* Itinerary Cards */
+  .itinerary-card {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Mobile phones (480px) */
+@media (max-width: 480px) {
+
+  /* Typography */
+  html {
+    font-size: 14px;
+  }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Header */
+  .site-title {
+    font-size: 1.35rem;
+  }
+
+  /* Cards */
+  .card-image {
+    height: 150px;
+    font-size: 2rem;
+  }
+
+  .card-content {
+    padding: var(--spacing-sm);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  /* Spacing Adjustments */
+  :root {
+    --spacing-xl: 2rem;
+    --spacing-lg: 1.5rem;
+  }
+
+  /* Search */
+  .search-box {
+    font-size: 0.95rem;
+  }
+}
+
+/* Large Tablets and Small Desktops (1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nearby-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Desktops (1440px+) */
+@media (min-width: 1440px) {
+
+  .container {
+    max-width: 1400px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Touch Enhancements */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Larger tap targets for touch */
+  .btn {
+    min-height: 44px;
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+
+  nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .card {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* Print Styles */
+@media print {
+
+  header, footer, nav, .search-container {
+    display: none;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .card, .location-details {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .hero {
+    background: none;
+    color: black;
+    padding: var(--spacing-md) 0;
+  }
+}
